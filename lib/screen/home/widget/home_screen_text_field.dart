@@ -34,10 +34,14 @@ class HomeScreenTextField extends StatelessWidget {
       //TODO
       hintText: "Search",
       hintStyle: context.texts.hint,
+      border: OutlineInputBorder(borderRadius: AppValues.smallBorderRadius),
       prefixIcon: Icon(Icons.search_outlined, color: context.colors.paragraph),
-      border: OutlineInputBorder(
-        borderRadius: AppValues.smallBorderRadius,
-      ),
+      suffixIcon: state.searchState.value.isNotEmpty
+          ? IconButton(
+              onPressed: state.onClearPressed,
+              icon: const Icon(Icons.cancel),
+            )
+          : null,
     );
   }
 }

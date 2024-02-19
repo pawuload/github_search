@@ -20,9 +20,9 @@ Repository _$RepositoryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Repository {
-  String get name => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  String get language => throw _privateConstructorUsedError;
+  String get fullName => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $RepositoryCopyWith<$Res> {
           Repository value, $Res Function(Repository) then) =
       _$RepositoryCopyWithImpl<$Res, Repository>;
   @useResult
-  $Res call({String name, String description, String language});
+  $Res call({String fullName, String? description, String? language});
 }
 
 /// @nodoc
@@ -52,23 +52,23 @@ class _$RepositoryCopyWithImpl<$Res, $Val extends Repository>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? description = null,
-    Object? language = null,
+    Object? fullName = null,
+    Object? description = freezed,
+    Object? language = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      fullName: null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      language: null == language
+              as String?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -81,7 +81,7 @@ abstract class _$$RepositoryImplCopyWith<$Res>
       __$$RepositoryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String description, String language});
+  $Res call({String fullName, String? description, String? language});
 }
 
 /// @nodoc
@@ -95,47 +95,50 @@ class __$$RepositoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? description = null,
-    Object? language = null,
+    Object? fullName = null,
+    Object? description = freezed,
+    Object? language = freezed,
   }) {
     return _then(_$RepositoryImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      fullName: null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      language: null == language
+              as String?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$RepositoryImpl extends _Repository {
   _$RepositoryImpl(
-      {required this.name, required this.description, required this.language})
+      {required this.fullName,
+      required this.description,
+      required this.language})
       : super._();
 
   factory _$RepositoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$RepositoryImplFromJson(json);
 
   @override
-  final String name;
+  final String fullName;
   @override
-  final String description;
+  final String? description;
   @override
-  final String language;
+  final String? language;
 
   @override
   String toString() {
-    return 'Repository(name: $name, description: $description, language: $language)';
+    return 'Repository(fullName: $fullName, description: $description, language: $language)';
   }
 
   @override
@@ -143,7 +146,8 @@ class _$RepositoryImpl extends _Repository {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RepositoryImpl &&
-            (identical(other.name, name) || other.name == name) &&
+            (identical(other.fullName, fullName) ||
+                other.fullName == fullName) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.language, language) ||
@@ -152,7 +156,7 @@ class _$RepositoryImpl extends _Repository {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, description, language);
+  int get hashCode => Object.hash(runtimeType, fullName, description, language);
 
   @JsonKey(ignore: true)
   @override
@@ -170,20 +174,20 @@ class _$RepositoryImpl extends _Repository {
 
 abstract class _Repository extends Repository {
   factory _Repository(
-      {required final String name,
-      required final String description,
-      required final String language}) = _$RepositoryImpl;
+      {required final String fullName,
+      required final String? description,
+      required final String? language}) = _$RepositoryImpl;
   _Repository._() : super._();
 
   factory _Repository.fromJson(Map<String, dynamic> json) =
       _$RepositoryImpl.fromJson;
 
   @override
-  String get name;
+  String get fullName;
   @override
-  String get description;
+  String? get description;
   @override
-  String get language;
+  String? get language;
   @override
   @JsonKey(ignore: true)
   _$$RepositoryImplCopyWith<_$RepositoryImpl> get copyWith =>

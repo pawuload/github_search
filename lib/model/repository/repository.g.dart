@@ -8,14 +8,14 @@ part of 'repository.dart';
 
 _$RepositoryImpl _$$RepositoryImplFromJson(Map<String, dynamic> json) =>
     _$RepositoryImpl(
-      name: json['name'] as String,
-      description: json['description'] as String,
-      language: json['language'] as String,
+      fullName: json['full_name'] as String,
+      description: json['description'] as String?,
+      language: json['language'] as String?,
     );
 
 Map<String, dynamic> _$$RepositoryImplToJson(_$RepositoryImpl instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'full_name': instance.fullName,
       'description': instance.description,
       'language': instance.language,
     };

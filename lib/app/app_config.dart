@@ -1,7 +1,9 @@
 class AppConfig {
-  const AppConfig._();
+  const AppConfig._({required this.apiBaseUrl});
 
-  static const dev = AppConfig._();
+  final String apiBaseUrl;
+
+  static const dev = AppConfig._(apiBaseUrl: 'https://api.github.com/');
 
   static const all = {'dev': dev};
 

@@ -1,25 +1,25 @@
 import 'package:utopia_arch/utopia_arch.dart';
 
-const _onboardingKey = 'user.isOnboarded';
+const _themeKey = 'theme.darkMode';
 
 class UserPreferencesState implements HasInitialized {
-  final bool? isOnboarded;
-  final void Function() setOnboarded;
+  final bool? darkMode;
+  final void Function() toggle;
 
   const UserPreferencesState({
-    required this.isOnboarded,
-    required this.setOnboarded,
+    required this.darkMode,
+    required this.toggle,
   });
 
   @override
-  bool get isInitialized => isOnboarded != null;
+  bool get isInitialized => darkMode != null;
 }
 
 UserPreferencesState useUserPreferencesState() {
-  final isOnboardedState = usePreferencesPersistedState<bool>(_onboardingKey, defaultValue: false);
+  final darkModeState = usePreferencesPersistedState<bool>(_themeKey, defaultValue: false);
 
   return UserPreferencesState(
-    isOnboarded: isOnboardedState.value,
-    setOnboarded: () => isOnboardedState.value = true,
+    darkMode: darkModeState.value,
+    toggle: () => darkModeState.value = true,
   );
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:github_search/common/widget/loader/app_loader.dart';
 import 'package:github_search/screen/home/state/home_screen_state.dart';
+import 'package:github_search/screen/home/widget/home_screen_list_item.dart';
 import 'package:github_search/util/extension/context_extensions.dart';
-import 'package:utopia_arch/utopia_arch.dart';
 
 class HomeScreenList extends StatelessWidget {
   final HomeScreenState state;
@@ -10,10 +11,29 @@ class HomeScreenList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
-  }
+    if (state.isLoading) return const AppLoader();
 
-  Widget _buildXd(BuildContext context) {
-    return Container();
+    if (state.repositoryList != null) {
+      if (state.repositoryList!.isEmpty) {
+        return Center(
+          child: Text(
+            'Your search did not match any repositories',
+            style: context.texts.text,
+          ),
+        );
+      }
+
+      return ListView.builder(
+        itemCount: state.repositoryList!.length,
+        itemBuilder: (context, index) {
+          return HomeScreenListItem(
+            state: state,
+            repository: state.repositoryList![index],
+          );
+        },
+      );
+    }
+
+    return const SizedBox.shrink();
   }
 }

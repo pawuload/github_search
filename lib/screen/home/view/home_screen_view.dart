@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:github_search/common/constant/app_icons.dart';
 import 'package:github_search/common/constant/app_values.dart';
 import 'package:github_search/screen/home/state/home_screen_state.dart';
-import 'package:github_search/screen/home/widget/home_screen_list_item.dart';
+import 'package:github_search/screen/home/widget/home_screen_list.dart';
 import 'package:github_search/screen/home/widget/home_screen_text_field.dart';
 import 'package:github_search/util/extension/context_extensions.dart';
 
@@ -25,7 +25,9 @@ class HomeScreenView extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 12),
               child: HomeScreenTextField(state: state),
             ),
-            HomeScreenListItem(state: state),
+            Expanded(
+              child: HomeScreenList(state: state),
+            ),
           ],
         ),
       ),
