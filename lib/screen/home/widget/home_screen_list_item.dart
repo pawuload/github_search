@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:github_search/common/constant/app_values.dart';
 import 'package:github_search/model/repository/repository.dart';
-import 'package:github_search/screen/home/state/home_screen_state.dart';
 import 'package:github_search/util/extension/context_extensions.dart';
 
 class HomeScreenListItem extends StatelessWidget {
-  final HomeScreenState state;
+  final void Function(Repository) onItemPressed;
   final Repository repository;
 
-  const HomeScreenListItem({super.key, required this.state, required this.repository});
+  const HomeScreenListItem({super.key, required this.onItemPressed, required this.repository});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => state.onItemPressed(repository),
+      onTap: () => onItemPressed(repository),
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 12),
         padding: const EdgeInsets.all(12),

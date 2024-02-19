@@ -13,6 +13,7 @@ class PullsPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: _buildAppBar(context),
       backgroundColor: context.colors.background,
       body: Padding(
         padding: AppValues.screenPadding,
@@ -42,6 +43,14 @@ class PullsPageView extends StatelessWidget {
           number: item.number,
         );
       },
+    );
+  }
+
+  PreferredSizeWidget _buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: context.colors.primary,
+      iconTheme: IconThemeData(color: context.colors.text),
+      title: Text(context.strings.pulls.appbar, style: context.texts.title),
     );
   }
 }

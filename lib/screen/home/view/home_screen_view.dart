@@ -37,6 +37,7 @@ class HomeScreenView extends StatelessWidget {
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: context.colors.primary,
+      title: Text(context.strings.home.appbar, style: context.texts.title),
       actions: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -49,19 +50,13 @@ class HomeScreenView extends StatelessWidget {
           ),
         ),
       ],
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Transform.scale(
-            scale: 0.9,
-            child: SvgPicture.asset(
-              AppIcons.logo,
-              color: context.colors.text,
-            ),
-          ),
-          const SizedBox(width: 8),
-          Text(context.strings.home.appbar, style: context.texts.title),
-        ],
+      leadingWidth: 50,
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 12),
+        child: SvgPicture.asset(
+          AppIcons.logo,
+          color: context.colors.text,
+        ),
       ),
     );
   }

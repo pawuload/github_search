@@ -27,13 +27,15 @@ HomeScreenState useHomeScreenState({
 }) {
   final themeState = useProvided<ThemeState>();
   final repositoryService = useInjected<RepositoryService>();
+
   final searchState = useFieldState();
 
+  //returns value and refreshes automatically when keys change
   final state = useAutoComputedState(
-    shouldCompute: searchState.value.isNotEmpty,
     () async => repositoryService.getRepos(searchState.value),
-    keys: [searchState.value],
+    shouldCompute: searchState.value.isNotEmpty,
     debounceDuration: const Duration(milliseconds: 300),
+    keys: [searchState.value],
   );
 
   void onItemPressed(Repository repository) => navigateToDetails(repository);

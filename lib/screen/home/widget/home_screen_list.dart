@@ -27,7 +27,7 @@ class HomeScreenList extends StatelessWidget {
         itemCount: state.repositoryList!.length,
         itemBuilder: (context, index) {
           return HomeScreenListItem(
-            state: state,
+            onItemPressed: state.onItemPressed,
             repository: state.repositoryList![index],
           );
         },
