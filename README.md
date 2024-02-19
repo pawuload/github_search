@@ -35,12 +35,13 @@ Repository relies on code generation. It can be run in two modes:
 ## Design
 
 ### Dark Theme
-![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209274922853990450/dark_theme.png?ex=65e65408&is=65d3df08&hm=5d455dc4734833054629e680d6d5f8f2741b73baf326456dc59428cbdae38ffd&=&format=webp&quality=lossless&width=2882&height=315)
+![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209276699905368136/dark_theme.png?ex=65e655b0&is=65d3e0b0&hm=513c42acbb2c9c1c40f0afbe3ec4c7aa9c68ea688605a42da058ff420250478a&=&format=webp&quality=lossless&width=1734&height=279)
 
-<br>
 
 ### Light Theme
-![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209274922623565884/light_theme.png?ex=65e65408&is=65d3df08&hm=578bb0ab7117ee4c3596b4ab494c586c0de59608a411d4f9c746cd0e34f9d9e8&=&format=webp&quality=lossless&width=2882&height=315)
+![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209276700521664532/light_theme.png?ex=65e655b0&is=65d3e0b0&hm=5ca4a36644de6df96776302a02910cd6f6beb67f364400074491c72d63814bea&=&format=webp&quality=lossless&width=1716&height=261)
+
+<br>
 
 ---
 
