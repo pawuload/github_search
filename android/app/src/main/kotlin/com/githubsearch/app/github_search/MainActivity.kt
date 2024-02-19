@@ -1,0 +1,6 @@
+package com.github_search.app
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
