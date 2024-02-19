@@ -21,7 +21,7 @@ Issue _$IssueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Issue {
   String get title => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
+  int get number => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +33,7 @@ abstract class $IssueCopyWith<$Res> {
   factory $IssueCopyWith(Issue value, $Res Function(Issue) then) =
       _$IssueCopyWithImpl<$Res, Issue>;
   @useResult
-  $Res call({String title, String url});
+  $Res call({String title, int number});
 }
 
 /// @nodoc
@@ -50,17 +50,17 @@ class _$IssueCopyWithImpl<$Res, $Val extends Issue>
   @override
   $Res call({
     Object? title = null,
-    Object? url = null,
+    Object? number = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -72,7 +72,7 @@ abstract class _$$IssueImplCopyWith<$Res> implements $IssueCopyWith<$Res> {
       __$$IssueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String url});
+  $Res call({String title, int number});
 }
 
 /// @nodoc
@@ -87,17 +87,17 @@ class __$$IssueImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? url = null,
+    Object? number = null,
   }) {
     return _then(_$IssueImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -105,7 +105,7 @@ class __$$IssueImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IssueImpl extends _Issue {
-  _$IssueImpl({required this.title, required this.url}) : super._();
+  _$IssueImpl({required this.title, required this.number}) : super._();
 
   factory _$IssueImpl.fromJson(Map<String, dynamic> json) =>
       _$$IssueImplFromJson(json);
@@ -113,11 +113,11 @@ class _$IssueImpl extends _Issue {
   @override
   final String title;
   @override
-  final String url;
+  final int number;
 
   @override
   String toString() {
-    return 'Issue(title: $title, url: $url)';
+    return 'Issue(title: $title, number: $number)';
   }
 
   @override
@@ -126,12 +126,12 @@ class _$IssueImpl extends _Issue {
         (other.runtimeType == runtimeType &&
             other is _$IssueImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.number, number) || other.number == number));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, url);
+  int get hashCode => Object.hash(runtimeType, title, number);
 
   @JsonKey(ignore: true)
   @override
@@ -148,7 +148,7 @@ class _$IssueImpl extends _Issue {
 }
 
 abstract class _Issue extends Issue {
-  factory _Issue({required final String title, required final String url}) =
+  factory _Issue({required final String title, required final int number}) =
       _$IssueImpl;
   _Issue._() : super._();
 
@@ -157,7 +157,7 @@ abstract class _Issue extends Issue {
   @override
   String get title;
   @override
-  String get url;
+  int get number;
   @override
   @JsonKey(ignore: true)
   _$$IssueImplCopyWith<_$IssueImpl> get copyWith =>

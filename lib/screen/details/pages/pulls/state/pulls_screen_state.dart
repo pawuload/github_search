@@ -19,9 +19,8 @@ PullsPageState usePullsPageState({
 }) {
   final repositoryService = useInjected<RepositoryService>();
 
-  final state = useAutoComputedState(
-    () async => repositoryService.getPullRequests(args.fullName),
-  );
+  final state = useAutoComputedState(() async => repositoryService.getPullRequests(args.fullName));
+
   return PullsPageState(
     pullList: state.valueOrNull ?? IList(),
     isLoading: state.value is ComputedStateValueInProgress,

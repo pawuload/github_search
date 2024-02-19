@@ -21,7 +21,7 @@ PullRequest _$PullRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PullRequest {
   String get title => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
+  int get number => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $PullRequestCopyWith<$Res> {
           PullRequest value, $Res Function(PullRequest) then) =
       _$PullRequestCopyWithImpl<$Res, PullRequest>;
   @useResult
-  $Res call({String title, String url});
+  $Res call({String title, int number});
 }
 
 /// @nodoc
@@ -52,17 +52,17 @@ class _$PullRequestCopyWithImpl<$Res, $Val extends PullRequest>
   @override
   $Res call({
     Object? title = null,
-    Object? url = null,
+    Object? number = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -75,7 +75,7 @@ abstract class _$$PullRequestImplCopyWith<$Res>
       __$$PullRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String url});
+  $Res call({String title, int number});
 }
 
 /// @nodoc
@@ -90,17 +90,17 @@ class __$$PullRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? url = null,
+    Object? number = null,
   }) {
     return _then(_$PullRequestImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -108,7 +108,7 @@ class __$$PullRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PullRequestImpl extends _PullRequest {
-  _$PullRequestImpl({required this.title, required this.url}) : super._();
+  _$PullRequestImpl({required this.title, required this.number}) : super._();
 
   factory _$PullRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$PullRequestImplFromJson(json);
@@ -116,11 +116,11 @@ class _$PullRequestImpl extends _PullRequest {
   @override
   final String title;
   @override
-  final String url;
+  final int number;
 
   @override
   String toString() {
-    return 'PullRequest(title: $title, url: $url)';
+    return 'PullRequest(title: $title, number: $number)';
   }
 
   @override
@@ -129,12 +129,12 @@ class _$PullRequestImpl extends _PullRequest {
         (other.runtimeType == runtimeType &&
             other is _$PullRequestImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.number, number) || other.number == number));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, url);
+  int get hashCode => Object.hash(runtimeType, title, number);
 
   @JsonKey(ignore: true)
   @override
@@ -153,7 +153,7 @@ class _$PullRequestImpl extends _PullRequest {
 abstract class _PullRequest extends PullRequest {
   factory _PullRequest(
       {required final String title,
-      required final String url}) = _$PullRequestImpl;
+      required final int number}) = _$PullRequestImpl;
   _PullRequest._() : super._();
 
   factory _PullRequest.fromJson(Map<String, dynamic> json) =
@@ -162,7 +162,7 @@ abstract class _PullRequest extends PullRequest {
   @override
   String get title;
   @override
-  String get url;
+  int get number;
   @override
   @JsonKey(ignore: true)
   _$$PullRequestImplCopyWith<_$PullRequestImpl> get copyWith =>

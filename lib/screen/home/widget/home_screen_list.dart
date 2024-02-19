@@ -17,7 +17,7 @@ class HomeScreenList extends StatelessWidget {
       if (state.repositoryList!.isEmpty) {
         return Center(
           child: Text(
-            'Your search did not match any repositories',
+            context.strings.home.emptyList,
             style: context.texts.text,
           ),
         );

@@ -9,11 +9,11 @@ part of 'pull_request.dart';
 _$PullRequestImpl _$$PullRequestImplFromJson(Map<String, dynamic> json) =>
     _$PullRequestImpl(
       title: json['title'] as String,
-      url: json['url'] as String,
+      number: json['number'] as int,
     );
 
 Map<String, dynamic> _$$PullRequestImplToJson(_$PullRequestImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
-      'url': instance.url,
+      'number': instance.number,
     };

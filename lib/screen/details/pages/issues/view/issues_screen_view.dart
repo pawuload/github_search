@@ -27,7 +27,7 @@ class IssuesPageView extends StatelessWidget {
     if (state.issueList.isEmpty) {
       return Center(
         child: Text(
-          'No issues found',
+          context.strings.issues.emptyList,
           style: context.texts.text,
         ),
       );
@@ -39,7 +39,7 @@ class IssuesPageView extends StatelessWidget {
         final item = state.issueList[index];
         return ListItem(
           title: item.title,
-          url: item.url,
+          number: item.number,
         );
       },
     );

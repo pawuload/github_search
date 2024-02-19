@@ -27,7 +27,7 @@ class PullsPageView extends StatelessWidget {
     if (state.pullList.isEmpty) {
       return Center(
         child: Text(
-          'No issues found',
+          context.strings.pulls.emptyList,
           style: context.texts.text,
         ),
       );
@@ -39,7 +39,7 @@ class PullsPageView extends StatelessWidget {
         final item = state.pullList[index];
         return ListItem(
           title: item.title,
-          url: item.url,
+          number: item.number,
         );
       },
     );

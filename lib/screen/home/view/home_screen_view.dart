@@ -60,7 +60,7 @@ class HomeScreenView extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          Text('GitHub Search', style: context.texts.title),
+          Text(context.strings.home.appbar, style: context.texts.title),
         ],
       ),
     );

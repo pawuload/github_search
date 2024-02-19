@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:github_search/app/global_state/initialization/initialization_state.dart';
 import 'package:github_search/common/constant/app_icons.dart';
 import 'package:github_search/screen/home/home_screen.dart';
 import 'package:github_search/util/extension/context_extensions.dart';
@@ -16,13 +15,9 @@ class SplashScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final initializationState = useProvided<InitializationState>();
-
     useEffect(() async {
-      if (initializationState.isInitialized) {
-        unawaited(context.navigator.pushReplacementNamed(HomeScreen.route));
-      }
-    }, [initializationState.isInitialized]);
+      unawaited(context.navigator.pushReplacementNamed(HomeScreen.route));
+    }, []);
 
     return Scaffold(
       backgroundColor: context.colors.background,

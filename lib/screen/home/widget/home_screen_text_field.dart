@@ -31,8 +31,7 @@ class HomeScreenTextField extends StatelessWidget {
         borderSide: BorderSide(color: context.colors.accent),
       ),
       contentPadding: EdgeInsets.zero,
-      //TODO
-      hintText: "Search",
+      hintText: context.strings.home.search,
       hintStyle: context.texts.hint,
       border: OutlineInputBorder(borderRadius: AppValues.smallBorderRadius),
       prefixIcon: Icon(Icons.search_outlined, color: context.colors.paragraph),

@@ -4,14 +4,11 @@ import 'package:github_search/app/app_injector.dart';
 import 'package:github_search/app/app_localizations.dart';
 import 'package:github_search/app/app_reporter.dart';
 import 'package:github_search/app/app_routing.dart';
-import 'package:github_search/app/global_state/initialization/initialization_state.dart';
 import 'package:github_search/app/global_state/theme/theme_state.dart';
 import 'package:github_search/app/widget/app_global_error_dialog.dart';
 import 'package:github_search/util/hook/use_async_stream_subscription.dart';
 import 'package:injector/injector.dart';
 import 'package:utopia_arch/utopia_arch.dart';
-
-import 'global_state/user_preferences/user_preferences_state.dart';
 
 class App extends HookWidget {
   static void run() {
@@ -73,9 +70,7 @@ class App extends HookWidget {
     return {
       GlobalKey<NavigatorState>: () => navigatorKey,
       Injector: () => useMemoized(AppInjector.setup),
-      UserPreferencesState: useUserPreferencesState,
       ThemeState: useThemeState,
-      InitializationState: useInitializationState, // leave at the end
     };
   }
 

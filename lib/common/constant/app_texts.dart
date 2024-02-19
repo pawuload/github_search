@@ -24,7 +24,6 @@ class AppTexts {
 
   TextStyle get textSmall => text.copyWith(fontSize: 10);
 
-
   TextStyle get hint => TextStyle(
         fontFamily: "NotoSansMono",
         fontWeight: FontWeight.w400,

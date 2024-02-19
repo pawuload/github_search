@@ -10,7 +10,7 @@ class PullRequest with _$PullRequest {
 
   factory PullRequest({
     required String title,
-    required String url,
+    required int number,
   }) = _PullRequest;
 
   factory PullRequest.fromJson(Map<String, dynamic> json) => _$PullRequestFromJson(json);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_search/util/extension/context_extensions.dart';
 import 'package:utopia_arch/utopia_arch.dart';
 
 class AppGlobalErrorDialog extends StatelessWidget {
@@ -8,20 +9,15 @@ class AppGlobalErrorDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO set strings
+    final strings = context.strings.error;
     return AlertDialog(
-      title: Text('Error'),
-      content: Text('Something gone wrong'),
+      title: Text(strings.title),
+      content: Text(strings.subtitle),
       actions: [
-        TextButton(onPressed: () => context.navigator.pop(), child: Text('ok')),
-        if (error.canRetry)
-          TextButton(
-            onPressed: () {
-              context.navigator.pop();
-              error.retry!();
-            },
-            child: Text('retry'),
-          ),
+        TextButton(
+          onPressed: () => context.navigator.pop(),
+          child: Text(context.strings.common.ok),
+        ),
       ],
     );
   }

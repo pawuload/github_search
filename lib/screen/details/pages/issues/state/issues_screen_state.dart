@@ -19,9 +19,7 @@ IssuesPageState useIssuesPageState({
 }) {
   final repositoryService = useInjected<RepositoryService>();
 
-  final state = useAutoComputedState(
-    () async => repositoryService.getIssues(args.fullName),
-  );
+  final state = useAutoComputedState(() async => repositoryService.getIssues(args.fullName));
 
   return IssuesPageState(
     issueList: state.valueOrNull ?? IList(),

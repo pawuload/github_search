@@ -10,7 +10,7 @@ class Issue with _$Issue {
 
   factory Issue({
     required String title,
-    required String url,
+    required int number,
   }) = _Issue;
 
   factory Issue.fromJson(Map<String, dynamic> json) => _$IssueFromJson(json);
