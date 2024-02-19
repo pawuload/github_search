@@ -32,6 +32,18 @@ Repository relies on code generation. It can be run in two modes:
    development.
 ---
 
+## Design
+
+### Dark Theme
+![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209274922853990450/dark_theme.png?ex=65e65408&is=65d3df08&hm=5d455dc4734833054629e680d6d5f8f2741b73baf326456dc59428cbdae38ffd&=&format=webp&quality=lossless&width=2882&height=315)
+
+---
+
+### Light Theme
+![AppScreenshot](https://media.discordapp.net/attachments/1160505556029681744/1209274922623565884/light_theme.png?ex=65e65408&is=65d3df08&hm=578bb0ab7117ee4c3596b4ab494c586c0de59608a411d4f9c746cd0e34f9d9e8&=&format=webp&quality=lossless&width=2882&height=315)
+
+---
+
 ## Screenshots and app flow
 
 ### Splash screen
@@ -52,3 +64,5 @@ Page displaying issues reported for selected repository
 ### Pull Requests screen
 Page displaying pull requests for selected repository
 ![App Screenshot](https://media.discordapp.net/attachments/1160505556029681744/1209267785813991424/p4.png?ex=65e64d63&is=65d3d863&hm=9cbfc40adc1550499059aec6b5f6c0cb9771fe77a7a53b83babb868fccd5d2b7&=&format=webp&quality=lossless&width=2130&height=1491)
+
+## Tech Stack
