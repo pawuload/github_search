@@ -67,3 +67,8 @@ Page displaying pull requests for selected repository
 ![App Screenshot](https://media.discordapp.net/attachments/1160505556029681744/1209267785813991424/p4.png?ex=65e64d63&is=65d3d863&hm=9cbfc40adc1550499059aec6b5f6c0cb9771fe77a7a53b83babb868fccd5d2b7&=&format=webp&quality=lossless&width=2130&height=1491)
 
 ## Tech Stack
+
+- ### State Management: [utopia_hooks](https://hooks.utopiasoft.io/)
+- ### Platform API: [dio](https://pub.dev/packages/dio)
+- ### Code generators: [freezed](https://pub.dev/packages/freezed)
+- ### Localization: [flutter_sheet_localization](https://pub.dev/packages/flutter_sheet_localization)

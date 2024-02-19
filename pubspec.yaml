@@ -30,7 +30,6 @@ dependencies:
   flutter_svg: ^2.0.0+1
   smooth_page_indicator: ^1.1.0
   flutter_spinkit: ^5.2.0
-  flutter_shakemywidget: ^1.0.5+1
 
   # misc utils
   intl: ^0.18.0
