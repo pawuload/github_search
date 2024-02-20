@@ -4,7 +4,7 @@ A simple application that meets the following requirements:
 
 - Searching GitHub repositories based on provided keywords.
 - Presenting details associated with the selected repository.
-- Displaying a list of open issues or pull requests for the selected repository.
+- Displaying a list of open issues and pull requests for the selected repository.
 
 ---
 
