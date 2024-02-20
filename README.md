@@ -20,7 +20,6 @@ A simple application that meets the following requirements:
 
 ```bash
 $ flutter pub get
-$ mason get # optional
 ```
 
 ## Code generation
