@@ -823,10 +823,10 @@ packages:
     dependency: "direct main"
     description:
       name: utopia_arch
-      sha256: "09b2e0bb593db9c4754edbd287ae2634373eb70d591dda1bb238c76089fadb04"
+      sha256: "443a150c3ab51348efd6f5d9b0cbd464fa3a90938011f37e25c74ab441065463"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0+11"
+    version: "0.5.0+12"
   utopia_collections:
     dependency: transitive
     description:
@@ -839,10 +839,10 @@ packages:
     dependency: transitive
     description:
       name: utopia_hooks
-      sha256: "64fe49e71a9c22e16dd07d19dfa032407f22881e85db9f8d736a5bd282be0c74"
+      sha256: "5227b21f3f1d71727d36fdac78a148c30b43441c438307564348a0fc93d51276"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.3+4"
+    version: "0.4.3+5"
   utopia_lints:
     dependency: "direct dev"
     description:
