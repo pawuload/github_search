@@ -470,6 +470,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  mocktail:
+    dependency: "direct dev"
+    description:
+      name: mocktail
+      sha256: c4b5007d91ca4f67256e720cb1b6d704e79a510183a12fa551021f652577dce6
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
   nested:
     dependency: transitive
     description:
@@ -815,10 +823,10 @@ packages:
     dependency: "direct main"
     description:
       name: utopia_arch
-      sha256: "29dfc4cc1b448e972fdba7c2b6441f4c7652fe4ebf0a501cfd2e2eb99b375ac2"
+      sha256: "09b2e0bb593db9c4754edbd287ae2634373eb70d591dda1bb238c76089fadb04"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0+8"
+    version: "0.5.0+11"
   utopia_collections:
     dependency: transitive
     description:
@@ -831,10 +839,10 @@ packages:
     dependency: transitive
     description:
       name: utopia_hooks
-      sha256: "8a2bb5a1d44583f65f35513ab038a00b94be845107e030870a93048eae6f3683"
+      sha256: "64fe49e71a9c22e16dd07d19dfa032407f22881e85db9f8d736a5bd282be0c74"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.3+1"
+    version: "0.4.3+4"
   utopia_lints:
     dependency: "direct dev"
     description:

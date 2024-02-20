@@ -6,9 +6,8 @@ part 'pull_request.g.dart';
 
 @freezed
 class PullRequest with _$PullRequest {
-  PullRequest._();
 
-  factory PullRequest({
+  const factory PullRequest({
     required String title,
     required int number,
   }) = _PullRequest;

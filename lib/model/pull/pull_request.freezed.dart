@@ -107,8 +107,8 @@ class __$$PullRequestImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PullRequestImpl extends _PullRequest {
-  _$PullRequestImpl({required this.title, required this.number}) : super._();
+class _$PullRequestImpl implements _PullRequest {
+  const _$PullRequestImpl({required this.title, required this.number});
 
   factory _$PullRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$PullRequestImplFromJson(json);
@@ -150,11 +150,10 @@ class _$PullRequestImpl extends _PullRequest {
   }
 }
 
-abstract class _PullRequest extends PullRequest {
-  factory _PullRequest(
+abstract class _PullRequest implements PullRequest {
+  const factory _PullRequest(
       {required final String title,
       required final int number}) = _$PullRequestImpl;
-  _PullRequest._() : super._();
 
   factory _PullRequest.fromJson(Map<String, dynamic> json) =
       _$PullRequestImpl.fromJson;

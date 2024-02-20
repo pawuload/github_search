@@ -6,10 +6,9 @@ part 'repository.g.dart';
 
 @freezed
 class Repository with _$Repository {
-  Repository._();
 
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Repository({
+  const factory Repository({
     required String fullName,
     required String? description,
     required String? language,

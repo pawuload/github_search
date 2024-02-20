@@ -104,8 +104,8 @@ class __$$IssueImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$IssueImpl extends _Issue {
-  _$IssueImpl({required this.title, required this.number}) : super._();
+class _$IssueImpl implements _Issue {
+  const _$IssueImpl({required this.title, required this.number});
 
   factory _$IssueImpl.fromJson(Map<String, dynamic> json) =>
       _$$IssueImplFromJson(json);
@@ -147,10 +147,9 @@ class _$IssueImpl extends _Issue {
   }
 }
 
-abstract class _Issue extends Issue {
-  factory _Issue({required final String title, required final int number}) =
-      _$IssueImpl;
-  _Issue._() : super._();
+abstract class _Issue implements Issue {
+  const factory _Issue(
+      {required final String title, required final int number}) = _$IssueImpl;
 
   factory _Issue.fromJson(Map<String, dynamic> json) = _$IssueImpl.fromJson;
 

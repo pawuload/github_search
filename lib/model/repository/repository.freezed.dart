@@ -119,12 +119,11 @@ class __$$RepositoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$RepositoryImpl extends _Repository {
-  _$RepositoryImpl(
+class _$RepositoryImpl implements _Repository {
+  const _$RepositoryImpl(
       {required this.fullName,
       required this.description,
-      required this.language})
-      : super._();
+      required this.language});
 
   factory _$RepositoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$RepositoryImplFromJson(json);
@@ -172,12 +171,11 @@ class _$RepositoryImpl extends _Repository {
   }
 }
 
-abstract class _Repository extends Repository {
-  factory _Repository(
+abstract class _Repository implements Repository {
+  const factory _Repository(
       {required final String fullName,
       required final String? description,
       required final String? language}) = _$RepositoryImpl;
-  _Repository._() : super._();
 
   factory _Repository.fromJson(Map<String, dynamic> json) =
       _$RepositoryImpl.fromJson;

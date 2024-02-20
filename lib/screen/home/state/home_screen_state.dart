@@ -34,7 +34,7 @@ HomeScreenState useHomeScreenState({
   final state = useAutoComputedState(
     () async => repositoryService.getRepos(searchState.value),
     shouldCompute: searchState.value.isNotEmpty,
-    debounceDuration: const Duration(milliseconds: 300),
+    debounceDuration: const Duration(milliseconds: 500),
     keys: [searchState.value],
   );
 
