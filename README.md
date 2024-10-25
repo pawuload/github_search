@@ -17,17 +17,19 @@ A simple application that meets the following requirements:
 ---
 
 ## Setting up development environment
-
+To run the project make sure you have installed [FVM](https://fvm.app/documentation/getting-started/installation).
+<br>
+You can check what version of Flutter is used in `.fvmrc` file.
 ```bash
-$ flutter pub get
+$ fvm flutter pub get
 ```
 
 ## Code generation
 
 Repository relies on code generation. It can be run in two modes:
 
-1. `flutter pub run build_runner build` - Runs generation only once and exits. Good for CI.
-2. `flutter pub run build_runner watch` - Runs generation at startup and re-runs it when any file changes. Good for
+1. `fvm flutter pub run build_runner build` - Runs generation only once and exits. Good for CI.
+2. `fvm flutter pub run build_runner watch` - Runs generation at startup and re-runs it when any file changes. Good for
    development.
 ---
 
