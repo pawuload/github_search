@@ -37,27 +37,28 @@ Repository relies on code generation. It can be run in two modes:
 ## Screenshots and app flow
 
 ### Splash screen
-![App Screenshot](https://github.com/pawuload/github_search/blob/main/assets/screenshots/splash.png)
+
+<img src="https://github.com/pawuload/github_search/blob/main/assets/screenshots/splash.png" width="260">
 
 ### Home screen dark
 From there user can search for repositories and change theme
 
-![App Screenshot](https://github.com/pawuload/github_search/blob/main/assets/screenshots/home_dark.png)
+<img src="https://github.com/pawuload/github_search/blob/main/assets/screenshots/home_dark.png" width="260">
 
 ### Home screen light
 Same screen but in light mode
 
-![App Screenshot](https://github.com/pawuload/github_search/blob/main/assets/screenshots/home_light.png)
+<img src="https://github.com/pawuload/github_search/blob/main/assets/screenshots/home_light.png" width="260">
 
 ### Issues screen
 Page displaying issues reported for selected repository
 
-![App Screenshot](https://github.com/pawuload/github_search/blob/main/assets/screenshots/issues.png)
+<img src="https://github.com/pawuload/github_search/blob/main/assets/screenshots/issues.png" width="260">
 
 ### Pull Requests screen
 Page displaying pull requests for selected repository
 
-![App Screenshot](https://github.com/pawuload/github_search/blob/main/assets/screenshots/pull_requests.png)
+<img src="https://github.com/pawuload/github_search/blob/main/assets/screenshots/pull_requests.png" width="260">
 
 ## Tech Stack
 
